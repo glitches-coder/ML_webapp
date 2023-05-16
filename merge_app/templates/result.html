@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Energy Consumption Predictor</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+    </head>
+    <body>
+        <h1>Energy Consumption Predictor</h1>
+        {% if model == "model1" %}
+        <h2 class="model-result">Model 1 Result</h2>
+        {% elif model == "model2" %}
+        <h2 class="model-result">Model 2 Result</h2>
+        {% endif %}
+        <p class="prediction">The predicted energy consumption is: {{ prediction }}</p>
+        <p>The cost of energy consumed is: {{ cost }} INR</p>
+
+        </div>
+        <form action="/" method="GET">
+            <button type="submit" class="recalculate-button">Recalculate</button>
+        </form>
+    </body>
+</html>
+
